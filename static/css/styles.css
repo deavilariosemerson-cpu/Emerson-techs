@@ -1,0 +1,282 @@
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f2f4f7;
+
+    color: #333;
+
+    min-height: 100vh;
+}
+
+
+/* ==========================================
+   ENCABEZADO
+========================================== */
+
+header {
+
+    background-color: #1f2937;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+}
+
+
+header h1 {
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
+
+}
+
+
+header p {
+
+    font-size: 18px;
+
+}
+
+
+/* ==========================================
+   CONTENEDOR
+========================================== */
+
+.contenedor {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* ==========================================
+   TARJETAS
+========================================== */
+
+.tarjeta {
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.tarjeta h2 {
+
+    margin-bottom: 15px;
+
+    color: #1f2937;
+
+}
+
+
+.tarjeta p {
+
+    margin-bottom: 15px;
+
+    line-height: 1.5;
+
+}
+
+
+/* ==========================================
+   FORMULARIOS
+========================================== */
+
+form {
+
+    margin-top: 20px;
+
+}
+
+
+label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+}
+
+
+input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    margin-bottom: 15px;
+
+    font-size: 16px;
+
+}
+
+
+input:focus {
+
+    outline: none;
+
+    border-color: #2563eb;
+
+}
+
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+
+button:hover {
+
+    background-color: #1d4ed8;
+
+}
+
+
+.boton-nuevo {
+
+    background-color: #6b7280;
+
+}
+
+
+.boton-nuevo:hover {
+
+    background-color: #4b5563;
+
+}
+
+
+/* ==========================================
+   RESULTADOS
+========================================== */
+
+.resultado {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background-color: #eef2ff;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 6px;
+
+}
+
+
+.resultado h3 {
+
+    margin-bottom: 10px;
+
+}
+
+
+.resultado p {
+
+    margin-bottom: 8px;
+
+}
+
+
+/* ==========================================
+   PIE DE PÁGINA
+========================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    background-color: #1f2937;
+
+    color: white;
+
+    margin-top: 40px;
+
+}
+
+
+/* ==========================================
+   DISEÑO RESPONSIVE
+========================================== */
+
+@media (max-width: 900px) {
+
+    .contenedor {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contenedor {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

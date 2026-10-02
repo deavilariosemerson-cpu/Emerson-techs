@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ejercicios Python</title>
+
+    <!-- Conexión con CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ENCABEZADO
+    =========================================== -->
+
+    <header>
+
+        <h1>Ejercicios de Python</h1>
+
+        <p>
+            Programación Orientada a Objetos con Flask
+        </p>
+
+    </header>
+
+
+    <main class="contenedor">
+
+
+        <!-- ==========================================
+             EJERCICIO 1
+        =========================================== -->
+
+        <section class="tarjeta">
+
+            <h2>Ejercicio 1: Par o Impar</h2>
+
+            <p>
+                Ingresa un número y descubre si es par o impar.
+            </p>
+
+            <form method="POST">
+
+                <input type="hidden"
+                       name="tipo"
+                       value="par_impar">
+
+                <label>
+                    Número:
+                </label>
+
+                <input
+                    type="number"
+                    name="numero"
+                    placeholder="Ejemplo: 10"
+                    required
+                >
+
+                <button type="submit">
+                    Verificar
+                </button>
+
+            </form>
+
+
+            {% if resultado_par_impar %}
+
+                <div class="resultado">
+
+                    <strong>Resultado:</strong>
+
+                    <p>
+                        {{ resultado_par_impar }}
+                    </p>
+
+                </div>
+
+            {% endif %}
+
+        </section>
+
+
+        <!-- ==========================================
+             EJERCICIO 2
+        =========================================== -->
+
+        <section class="tarjeta">
+
+            <h2>Ejercicio 2: Tabla de Multiplicar</h2>
+
+            <p>
+                Ingresa un número y genera su tabla del 1 al 10.
+            </p>
+
+            <form method="POST">
+
+                <input type="hidden"
+                       name="tipo"
+                       value="tabla">
+
+                <label>
+                    Número:
+                </label>
+
+                <input
+                    type="number"
+                    name="numero_tabla"
+                    placeholder="Ejemplo: 5"
+                    required
+                >
+
+                <button type="submit">
+                    Mostrar tabla
+                </button>
+
+            </form>
+
+
+            {% if tabla %}
+
+                <div class="resultado">
+
+                    <h3>Tabla de multiplicar</h3>
+
+                    {% for linea in tabla %}
+
+                        <p>
+                            {{ linea }}
+                        </p>
+
+                    {% endfor %}
+
+                </div>
+
+            {% endif %}
+
+        </section>
+
+
+        <!-- ==========================================
+             EJERCICIO 3
+        =========================================== -->
+
+        <section class="tarjeta">
+
+            <h2>Ejercicio 3: Adivina el Número</h2>
+
+            <p>
+                Adivina un número secreto entre 1 y 100.
+            </p>
+
+            <form method="POST">
+
+                <input type="hidden"
+                       name="tipo"
+                       value="adivinar">
+
+                <label>
+                    Tu intento:
+                </label>
+
+                <input
+                    type="number"
+                    name="intento"
+                    min="1"
+                    max="100"
+                    placeholder="Entre 1 y 100"
+                    required
+                >
+
+                <button type="submit">
+                    Adivinar
+                </button>
+
+            </form>
+
+
+            {% if resultado_adivinanza %}
+
+                <div class="resultado">
+
+                    <strong>Resultado:</strong>
+
+                    <p>
+                        {{ resultado_adivinanza }}
+                    </p>
+
+                    <p>
+                        Intentos:
+                        {{ intentos }}
+                    </p>
+
+                </div>
+
+            {% endif %}
+
+
+            <form method="POST">
+
+                <input type="hidden"
+                       name="tipo"
+                       value="nuevo_juego">
+
+                <button
+                    type="submit"
+                    class="boton-nuevo"
+                >
+                    Nuevo juego
+                </button>
+
+            </form>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==========================================
+         PIE DE PÁGINA
+    =========================================== -->
+
+    <footer>
+
+        <p>
+            Proyecto de Programación Orientada a Objetos
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
